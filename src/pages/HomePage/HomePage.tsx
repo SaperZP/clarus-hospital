@@ -1,14 +1,20 @@
 import styles from './HomePage.module.scss';
 import {doctorData} from "../../helpers/data.ts";
 import DoctorCard from "../../components/DoctorCard/DoctorCard.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import DoctorModal from "../../components/Modal/DoctorModal.tsx";
 import {AppointmentDataI, Doctor} from "../../types.ts";
 import AppointmentItem from "../../components/AppointmentItem/AppointmentItem.tsx";
 
 const HomePage = () => {
   const [selectedDoc, setSelectedDoc] = useState<null | Doctor>(null);
-  const [appointmentsList, setAppointmentsList] = useState<AppointmentDataI[]>([]);
+  const [appointmentsList, setAppointmentsList] = useState<AppointmentDataI[]>(() => {
+    const storedAppointments = localStorage.getItem("appointments");
+
+    if (storedAppointments) {
+      return JSON.parse(storedAppointments);
+    } else return [];
+  });
 
   const addAppointmentHandler = (newAppointment: AppointmentDataI) => {
     setAppointmentsList((prevState) => [...prevState, newAppointment]);
@@ -26,6 +32,10 @@ const HomePage = () => {
     setAppointmentsList((prevState) => prevState
         .filter((appointment) => appointment.id !== id));
   }
+
+  useEffect(() => {
+    localStorage.setItem('appointments', JSON.stringify(appointmentsList));
+  }, [appointmentsList])
 
   return (
       <div className={styles.homePage}>
