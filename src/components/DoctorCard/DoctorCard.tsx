@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './DoctorCard.module.scss';
-import {Doctor} from "../../helpers/data.ts";
+import {Doctor} from "../../types.ts";
 
 interface DoctorCardProps {
   doctor: Doctor;

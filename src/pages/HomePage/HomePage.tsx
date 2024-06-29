@@ -68,7 +68,7 @@ const HomePage = () => {
                     </p>
                     <img
                         className={styles.homePage__noAppointments__img}
-                        src="/public/img/appointment.jpg"
+                        src="/img/appointment.jpg"
                         alt="no appointments"
                     />
                   </div>
