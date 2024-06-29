@@ -1,0 +1,18 @@
+.card {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+
+
+  &:hover{
+    border: 2px #fe0011 solid;
+    transform: scale(1.1);
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

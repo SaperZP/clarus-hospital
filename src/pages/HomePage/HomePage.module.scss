@@ -1,1 +1,40 @@
-.HomePage {}
+.homePage {
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  &__title {
+    text-align: center;
+    text-transform: capitalize;
+    color: #8316fe;
+  }
+
+  &__doctorsList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+  }
+
+  &__appointments {
+    width: 100%;
+  }
+
+  &__appointmentList {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__noAppointments__text {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &__noAppointments__img {
+    width: 100%;
+  }
+}

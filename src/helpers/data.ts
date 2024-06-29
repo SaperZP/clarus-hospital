@@ -1,3 +1,5 @@
+import {Doctor} from "../types.ts";
+
 export const appointmentData = [
   {
     id: 1,
@@ -22,7 +24,7 @@ export const appointmentData = [
   },
 ];
 
-export const doctorData = [
+export const doctorData: Doctor[] = [
   {
     id: 1,
     name: "Dr.Hazel Valery",

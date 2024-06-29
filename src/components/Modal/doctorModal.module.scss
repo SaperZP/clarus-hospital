@@ -1,0 +1,82 @@
+.doctorModalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(132, 155, 172, 0.75);
+}
+
+.doctorModal {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title {
+    color: #fe0011;
+    font-size: 30px;
+  }
+
+  &__closeIcon {
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 40px;
+
+    &:hover {
+      background-color: rgba(254, 0, 17, 0.5);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__modalFormName {
+    font-weight: bold;
+  }
+
+  &__input {
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__button {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    filter: brightness(80%);
+
+    &:hover {
+      filter: brightness(100%);
+    }
+  }
+
+  &__button_submit {
+    background-color: #10328a;
+  }
+
+  &__button_close {
+    background-color: #fe0011;
+  }
+
+}

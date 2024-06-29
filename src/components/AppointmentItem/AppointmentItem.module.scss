@@ -1,0 +1,53 @@
+.AppointmentItem {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(148deg, rgba(79, 135, 156, 1) 51%, rgba(120, 78, 0, 1) 100%);
+  padding: 0 40px;
+  border-radius: 10px;
+  font-size: 40px;
+  font-weight: 900;
+  border: 3px solid transparent;
+
+  &:hover {
+    border-color: black;
+  }
+
+  &__patientName {
+    color: #fe0011;
+    text-transform: capitalize;
+  }
+
+  &__icon {
+    align-self: center;
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    transition: transform 1s;
+
+    &:hover {
+      color: #fe0011;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__badge {
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(29, 140, 81, 0.9);
+    border-radius: 10px;
+  }
+
+  &__tag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background-color: #1d8c51;
+  }
+}
